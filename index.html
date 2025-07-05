@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dus-Music - Discover Your Sound</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-900 text-white">
+    <!-- Main Container -->
+    <div class="max-w-md mx-auto h-screen flex flex-col overflow-hidden">
+        <!-- Header -->
+        <header class="p-4 flex justify-between items-center border-b border-gray-800">
+            <div class="flex items-center">
+                <i class="fas fa-music text-purple-500 text-xl mr-2"></i>
+                <h1 class="text-xl font-bold">Dus-Music</h1>
+            </div>
+            <div class="flex space-x-4">
+                <i class="fas fa-search text-gray-400"></i>
+                <i class="fas fa-bars text-gray-400"></i>
+            </div>
+        </header>
+
+        <!-- Now Playing Bar (Fixed at bottom) -->
+        <div class="now-playing-bar bg-gray-800 p-3 flex items-center border-t border-gray-700">
+            <img src="https://timeit.site/songs/Tum%20Hi%20Ho.jpg" alt="Now Playing" class="w-12 h-12 rounded-md mr-3">
+            <div class="flex-1">
+                <h3 class="font-medium text-sm">Tum Hi Ho</h3>
+                <p class="text-gray-400 text-xs">Arijit Singh</p>
+            </div>
+            <div class="flex space-x-4">
+                <i class="fas fa-heart text-gray-400"></i>
+                <i class="fas fa-play text-purple-500"></i>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <main class="flex-1 overflow-y-auto p-4 pb-20">
+            <!-- Featured Playlist -->
+            <section class="mb-8">
+                <h2 class="text-xl font-bold mb-4">Featured Playlist</h2>
+                <div class="relative">
+                    <img src="https://timeit.site/songs/Tum%20Hi%20Ho.jpg" alt="Featured Playlist" class="w-full h-40 object-cover rounded-lg">
+                    <div class="absolute inset-0 bg-black bg-opacity-40 rounded-lg flex flex-col justify-end p-4">
+                        <h3 class="font-bold text-lg">Romantic Hits</h3>
+                        <p class="text-gray-300 text-sm">12 songs · 45 min</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Recently Played -->
+            <section class="mb-8">
+                <div class="flex justify-between items-center mb-4">
+                    <h2 class="text-xl font-bold">Recently Played</h2>
+                    <a href="#" class="text-purple-500 text-sm">See all</a>
+                </div>
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="bg-gray-800 p-3 rounded-lg">
+                        <img src="https://timeit.site/songs/Tum%20Hi%20Aana.jpg" alt="Song" class="w-full h-32 object-cover rounded-md mb-2">
+                        <h3 class="font-medium text-sm">Tum Hi Aana</h3>
+                        <p class="text-gray-400 text-xs">Jubin Nautiyal</p>
+                    </div>
+                    <div class="bg-gray-800 p-3 rounded-lg">
+                        <img src="https://timeit.site/songs/Tum%20Se%20Hi.jpg" alt="Song" class="w-full h-32 object-cover rounded-md mb-2">
+                        <h3 class="font-medium text-sm">Tum Se Hi</h3>
+                        <p class="text-gray-400 text-xs">Mohit Chauhan</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Popular Songs -->
+            <section>
+                <div class="flex justify-between items-center mb-4">
+                    <h2 class="text-xl font-bold">Popular Songs</h2>
+                    <a href="#" class="text-purple-500 text-sm">See all</a>
+                </div>
+                <div id="song-list" class="space-y-3">
+                    <!-- Songs will be loaded here from music.json -->
+                </div>
+            </section>
+        </main>
+
+        <!-- Bottom Navigation -->
+        <nav class="bg-gray-800 flex justify-around items-center p-3 border-t border-gray-700">
+            <a href="#" class="text-purple-500">
+                <i class="fas fa-home text-xl"></i>
+            </a>
+            <a href="#" class="text-gray-400">
+                <i class="fas fa-compass text-xl"></i>
+            </a>
+            <a href="#" class="text-gray-400">
+                <i class="fas fa-heart text-xl"></i>
+            </a>
+            <a href="#" class="text-gray-400">
+                <i class="fas fa-user text-xl"></i>
+            </a>
+        </nav>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
