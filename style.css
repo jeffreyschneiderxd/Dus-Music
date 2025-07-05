@@ -1,0 +1,53 @@
+/* Custom styles */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background: #1a1a1a;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #6b46c1;
+    border-radius: 10px;
+}
+
+/* Now playing bar animation */
+.now-playing-bar {
+    transition: transform 0.3s ease;
+}
+
+.now-playing-bar:hover {
+    transform: translateY(-5px);
+}
+
+/* Album art animation */
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.playing .album-art {
+    animation: rotate 20s linear infinite;
+}
+
+/* Progress bar thumb */
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 15px;
+    height: 15px;
+    background: #6b46c1;
+    border-radius: 50%;
+    cursor: pointer;
+}
